@@ -1,0 +1,624 @@
+
+
+<!doctype html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>DOKUMENTACJA GRY W SZACHY! &#8212; Szachy  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/bizstyle.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/bizstyle.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <!--[if lt IE 9]>
+    <script src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="#">Szachy  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">DOKUMENTACJA GRY W SZACHY!</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="dokumentacja-gry-w-szachy">
+<h1>DOKUMENTACJA GRY W SZACHY!<a class="headerlink" href="#dokumentacja-gry-w-szachy" title="Permalink to this headline">¶</a></h1>
+</section>
+<section id="pakiet-plansza">
+<h1>Pakiet Plansza<a class="headerlink" href="#pakiet-plansza" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><strong>Klasa Szachownica!</strong></p></li>
+</ul>
+<span class="target" id="module-Plansza.Szachownica"></span><dl class="py class">
+<dt class="sig sig-object py" id="Plansza.Szachownica.CasteRights">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">Plansza.Szachownica.</span></span><span class="sig-name descname"><span class="pre">CasteRights</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wks</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bks</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wqs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bqs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Plansza.Szachownica.CasteRights" title="Permalink to this definition">¶</a></dt>
+<dd><p>Klasa pomocnicza do przechowywania informacji o zasadach roszady</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="Plansza.Szachownica.Szachownica">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">Plansza.Szachownica.</span></span><span class="sig-name descname"><span class="pre">Szachownica</span></span><a class="headerlink" href="#Plansza.Szachownica.Szachownica" title="Permalink to this definition">¶</a></dt>
+<dd><p>Główna klasa programu, która przechowuje informacje o grze</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="Plansza.Szachownica.Szachownica.getAllPossibleMoves">
+<span class="sig-name descname"><span class="pre">getAllPossibleMoves</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Plansza.Szachownica.Szachownica.getAllPossibleMoves" title="Permalink to this definition">¶</a></dt>
+<dd><p>metoda zwraca wszystkie możliwe ruchy ale bez analizowania sytuacji gdy mamy szach</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>wszystkie możliwe ruchy</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Plansza.Szachownica.Szachownica.getValidMoves">
+<span class="sig-name descname"><span class="pre">getValidMoves</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Plansza.Szachownica.Szachownica.getValidMoves" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metoda zwracajaca wszystkie ruchy analizując szacha</p>
+<p>Iteracja przebiega odwrotnie niż naturalnie, aby nie napotkac problemu z indeksowaniem</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>wszystkie możliwe ruchy</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Plansza.Szachownica.Szachownica.inCheck">
+<span class="sig-name descname"><span class="pre">inCheck</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Plansza.Szachownica.Szachownica.inCheck" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metoda sprawdzajaca czy aktualny gracz jest w szachu</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>boolean zwracajacy czy jest szach</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Plansza.Szachownica.Szachownica.makeMove">
+<span class="sig-name descname"><span class="pre">makeMove</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">move</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Plansza.Szachownica.Szachownica.makeMove" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pobiera ruch jako parametr i wykonuje go</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>move</strong> – coordinates of the move</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>void</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Plansza.Szachownica.Szachownica.squareUnderAttack">
+<span class="sig-name descname"><span class="pre">squareUnderAttack</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Plansza.Szachownica.Szachownica.squareUnderAttack" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metoda zwracajaca informację, czy przeciwnik może zaatakować kwadrat o podanych koordynatach</p>
+<p>Metoda ta zamienia gracza który ma teraz runde i na jego podstawie analizuje sytuacę na szachownicy</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>r</strong> – wiersz badanego kwadratu</p></li>
+<li><p><strong>c</strong> – kolumna badanego kwadratu</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>boolean czy kwadrat jest zaatakowany</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Plansza.Szachownica.Szachownica.undoMove">
+<span class="sig-name descname"><span class="pre">undoMove</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Plansza.Szachownica.Szachownica.undoMove" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metoda pomocnicza do sprawdzania szacha i mata</p>
+<p>Cofa wykonany ruch</p>
+<p>Zagnieżdżona instrukcja if aktualizyje pozycję króla</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Plansza.Szachownica.Szachownica.updateCasteRights">
+<span class="sig-name descname"><span class="pre">updateCasteRights</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">move</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Plansza.Szachownica.Szachownica.updateCasteRights" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metoda aktualizujaca spełnione zasady roszady</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>move</strong> – tupla z ruchami możliwymi do wykonania</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>void</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="pakiet-szachy">
+<h1>Pakiet Szachy<a class="headerlink" href="#pakiet-szachy" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><strong>Klasa Bierka!</strong></p></li>
+</ul>
+<span class="target" id="module-Szachy.Bierka"></span><dl class="py class">
+<dt class="sig sig-object py" id="Szachy.Bierka.BierkaC">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">Szachy.Bierka.</span></span><span class="sig-name descname"><span class="pre">BierkaC</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Szachy.Bierka.BierkaC" title="Permalink to this definition">¶</a></dt>
+<dd><p>Klasa abstrakcyjna  BierkaC</p>
+</dd></dl>
+
+<ul class="simple">
+<li><p><strong>Klasa Goniec!</strong></p></li>
+</ul>
+<span class="target" id="module-Szachy.Goniec"></span><dl class="py class">
+<dt class="sig sig-object py" id="Szachy.Goniec.GoniecC">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">Szachy.Goniec.</span></span><span class="sig-name descname"><span class="pre">GoniecC</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Szachy.Goniec.GoniecC" title="Permalink to this definition">¶</a></dt>
+<dd><p>Klasa GoniecC przechowujaca wszystkie informacje o gońcu  dziedzicząca po klasie Bierka</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="Szachy.Goniec.GoniecC.getBishopMoves">
+<span class="sig-name descname"><span class="pre">getBishopMoves</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">moves</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">board</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">whiteToMove</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Szachy.Goniec.GoniecC.getBishopMoves" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metoda zwracajaca wszystkie możliwe ruchy gońca</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>r</strong> – wiersz ruchu</p></li>
+<li><p><strong>c</strong> – kolumna ruchu</p></li>
+<li><p><strong>moves</strong> – kontener (tupla) przechowująca możliwe ruchy</p></li>
+<li><p><strong>board</strong> – szachownica trwajacej gry</p></li>
+<li><p><strong>whiteToMove</strong> – booolean mówiący, czy jest ruch</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>wszystkie możliwe ruchy gońca</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<ul class="simple">
+<li><p><strong>Klasa Król!</strong></p></li>
+</ul>
+<span class="target" id="module-Szachy.Krol"><span id="module-Szachy.Król"></span></span><dl class="py class">
+<dt class="sig sig-object py" id="Szachy.Krol.KrolC">
+<span id="Szachy.Król.KrolC"></span><em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">Szachy.Król.</span></span><span class="sig-name descname"><span class="pre">KrolC</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Szachy.Krol.KrolC" title="Permalink to this definition">¶</a></dt>
+<dd><p>Klasa KrolC przechowująca wszystkie informacje o królu, dziedziczy po abstrakcyjnej klasie Bierka</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="Szachy.Krol.KrolC.getCastleMoves">
+<span id="Szachy.Król.KrolC.getCastleMoves"></span><span class="sig-name descname"><span class="pre">getCastleMoves</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">moves</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">whiteToMove</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">currentCastlinRight</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">board</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Szachy.Krol.KrolC.getCastleMoves" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generuje wszystkie możliwe ruchy króla w przypadku roszady</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>board</strong> – szachownica trwajacej gry</p></li>
+<li><p><strong>currentCastlinRight</strong> – tupla z zasadami roszady i informacją które są spełnione a które nie</p></li>
+<li><p><strong>whiteToMove</strong> – boolean okreslający czyj jest ruch</p></li>
+<li><p><strong>r</strong> – wiersz ruchu</p></li>
+<li><p><strong>c</strong> – kolumna ruchu</p></li>
+<li><p><strong>moves</strong> – tupla z możliwymi ruchami</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>wszystkie możliwe ruchy w przypadku roszady</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Szachy.Krol.KrolC.getKingMoves">
+<span id="Szachy.Król.KrolC.getKingMoves"></span><span class="sig-name descname"><span class="pre">getKingMoves</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">moves</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">board</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">whiteToMove</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">currentCastlinRight</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Szachy.Krol.KrolC.getKingMoves" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metoda zwracajaca wszystkie możliwe ruchy króla</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>r</strong> – wiersz ruchu</p></li>
+<li><p><strong>c</strong> – kolumna ruchu</p></li>
+<li><p><strong>moves</strong> – kontener (tupla) przechowująca możliwe ruchy</p></li>
+<li><p><strong>board</strong> – szachownica trwajacej gry</p></li>
+<li><p><strong>whiteToMove</strong> – booolean mówiący, czy jest ruch</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>wszystkie możliwe ruchy króla</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Szachy.Krol.KrolC.getKingSideCastleMoves">
+<span id="Szachy.Król.KrolC.getKingSideCastleMoves"></span><span class="sig-name descname"><span class="pre">getKingSideCastleMoves</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">moves</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">board</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Szachy.Krol.KrolC.getKingSideCastleMoves" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generuje wszystkie możliwe ruchy króla w przypadku roszady krótkiej</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>r</strong> – wiersz ruchu</p></li>
+<li><p><strong>c</strong> – kolumna ruchu</p></li>
+<li><p><strong>moves</strong> – tupla z możliwymi ruchami</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>wszystkie możliwe ruchy w przypadku roszady krótkiej</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Szachy.Krol.KrolC.getQueenSideCastleMoves">
+<span id="Szachy.Król.KrolC.getQueenSideCastleMoves"></span><span class="sig-name descname"><span class="pre">getQueenSideCastleMoves</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">moves</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">board</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Szachy.Krol.KrolC.getQueenSideCastleMoves" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generuje wszystkie możliwe ruchy króla w przypadku roszady długiej</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>r</strong> – wiersz ruchu</p></li>
+<li><p><strong>c</strong> – kolumna ruchu</p></li>
+<li><p><strong>moves</strong> – tupla z możliwymi ruchami</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>wszystkie możliwe ruchy w przypadku roszady długiej</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<ul class="simple">
+<li><p><strong>Klasa Królowa!</strong></p></li>
+</ul>
+<span class="target" id="module-Szachy.Krolowa"><span id="module-Szachy.Królowa"></span></span><dl class="py class">
+<dt class="sig sig-object py" id="Szachy.Krolowa.KrolowaC">
+<span id="Szachy.Królowa.KrolowaC"></span><em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">Szachy.Królowa.</span></span><span class="sig-name descname"><span class="pre">KrolowaC</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Szachy.Krolowa.KrolowaC" title="Permalink to this definition">¶</a></dt>
+<dd><p>Klasa KrolowaC przechowująca wszystkie informacje o Królowej</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="Szachy.Krolowa.KrolowaC.getQueenMoves">
+<span id="Szachy.Królowa.KrolowaC.getQueenMoves"></span><span class="sig-name descname"><span class="pre">getQueenMoves</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">moves</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">board</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">whiteToMove</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Szachy.Krolowa.KrolowaC.getQueenMoves" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metoda zwracająca wszystkie możliwe ruchy królowej</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>r</strong> – wiersz ruchu</p></li>
+<li><p><strong>c</strong> – kolumna ruchu</p></li>
+<li><p><strong>moves</strong> – kontener (tupla) przechowująca możliwe ruchy</p></li>
+<li><p><strong>board</strong> – szachownica trwajacej gry</p></li>
+<li><p><strong>whiteToMove</strong> – booolean mówiący, czy jest ruch</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>wszystkie możliwe ruchy królowej</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<ul class="simple">
+<li><p><strong>Klasa Pionek!</strong></p></li>
+</ul>
+<span class="target" id="module-Szachy.Pionek"></span><dl class="py class">
+<dt class="sig sig-object py" id="Szachy.Pionek.PionekC">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">Szachy.Pionek.</span></span><span class="sig-name descname"><span class="pre">PionekC</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Szachy.Pionek.PionekC" title="Permalink to this definition">¶</a></dt>
+<dd><p>Klasa PionekC która dziedziczy po abstarkcyjnej klasie Bierka i przechowująca informacje o pionku</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="Szachy.Pionek.PionekC.getPawnMoves">
+<span class="sig-name descname"><span class="pre">getPawnMoves</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">moves</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">board</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">whiteToMove</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enpassantPossible</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Szachy.Pionek.PionekC.getPawnMoves" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metoda zwracająca wszystkie możliwe ruchy pionka</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>enpassantPossible</strong> – boolean mówiący czy w ruchu zachodzi enpassant</p></li>
+<li><p><strong>r</strong> – wiersz ruchu</p></li>
+<li><p><strong>c</strong> – kolumna ruchu</p></li>
+<li><p><strong>moves</strong> – kontener (tupla) przechowująca możliwe ruchy</p></li>
+<li><p><strong>board</strong> – szachownica trwajacej gry</p></li>
+<li><p><strong>whiteToMove</strong> – booolean mówiący, czy jest ruch</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>wszystkie możliwe ruchy pionka</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Szachy.Pionek.PionekC.get_rank">
+<span class="sig-name descname"><span class="pre">get_rank</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Szachy.Pionek.PionekC.get_rank" title="Permalink to this definition">¶</a></dt>
+<dd><p>:return:typ pionka</p>
+</dd></dl>
+
+</dd></dl>
+
+<ul class="simple">
+<li><p><strong>Klasa Ruch!</strong></p></li>
+</ul>
+<span class="target" id="module-Szachy.Ruch"></span><dl class="py class">
+<dt class="sig sig-object py" id="Szachy.Ruch.RuchC">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">Szachy.Ruch.</span></span><span class="sig-name descname"><span class="pre">RuchC</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">startSq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endSq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">board</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enpassantPossible</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">isCastleMove</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Szachy.Ruch.RuchC" title="Permalink to this definition">¶</a></dt>
+<dd><p>Klasa przechowująca wszystkie informcje dotyczące ruchów w grze</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="Szachy.Ruch.RuchC.getChessNotation">
+<span class="sig-name descname"><span class="pre">getChessNotation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Szachy.Ruch.RuchC.getChessNotation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metoda pomocnicza zwracająca ruch w notacji szachowej</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>ruch w notacji szachowej</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Szachy.Ruch.RuchC.getRankFile">
+<span class="sig-name descname"><span class="pre">getRankFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Szachy.Ruch.RuchC.getRankFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metoda zwracajaca koordynaty konketnego kwadratu szachownicy</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>r</strong> – wiersz opisujacy kwadrat</p></li>
+<li><p><strong>c</strong> – kolumna opisująca kwadrat</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>opis ruchu w notacji szachowej</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<ul class="simple">
+<li><p><strong>Klasa Skoczek!</strong></p></li>
+</ul>
+<span class="target" id="module-Szachy.Skoczek"></span><dl class="py class">
+<dt class="sig sig-object py" id="Szachy.Skoczek.Knight">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">Szachy.Skoczek.</span></span><span class="sig-name descname"><span class="pre">Knight</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Szachy.Skoczek.Knight" title="Permalink to this definition">¶</a></dt>
+<dd><p>Klasa która przechowuje informacje o skoczku, dziedziczy po abstrakcyjnej klasie Bierka</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="Szachy.Skoczek.Knight.getKnightMoves">
+<span class="sig-name descname"><span class="pre">getKnightMoves</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">moves</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">board</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">whiteToMove</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Szachy.Skoczek.Knight.getKnightMoves" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metoda zwracająca wszystkie możliwe ruchy skoczka</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>r</strong> – wiersz ruchu</p></li>
+<li><p><strong>c</strong> – kolumna ruchu</p></li>
+<li><p><strong>moves</strong> – kontener przechowujacy wszystkie możliwe ruchy</p></li>
+<li><p><strong>board</strong> – szachownica istniejacej gry</p></li>
+<li><p><strong>whiteToMove</strong> – boolean określajacy czyj jest ruch</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>wszystkie możliwe ruchy skoczka</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<ul class="simple">
+<li><p><strong>Klasa Wieża!</strong></p></li>
+</ul>
+<span class="target" id="module-Szachy.Wieza"><span id="module-Szachy.Wieża"></span></span><dl class="py class">
+<dt class="sig sig-object py" id="Szachy.Wieza.WiezaC">
+<span id="Szachy.Wieża.WiezaC"></span><em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">Szachy.Wieża.</span></span><span class="sig-name descname"><span class="pre">WiezaC</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Szachy.Wieza.WiezaC" title="Permalink to this definition">¶</a></dt>
+<dd><p>Klasa WiezaC przechowujaca wszystkie informacje o Wieży, dziedziczy po abstrakcyjnej klasie Bierka</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="Szachy.Wieza.WiezaC.getRookMoves">
+<span id="Szachy.Wieża.WiezaC.getRookMoves"></span><em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">getRookMoves</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">moves</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">board</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">whiteToMove</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Szachy.Wieza.WiezaC.getRookMoves" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metoda zwracająca wszystkie możliwe ruchy wieży</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>r</strong> – wiersz w ruchu</p></li>
+<li><p><strong>c</strong> – kolumna w ruchu</p></li>
+<li><p><strong>moves</strong> – ruchy które wykonujemy wieżą</p></li>
+<li><p><strong>board</strong> – szachownica istniejącej gry</p></li>
+<li><p><strong>whiteToMove</strong> – boolean określający czyj jest ruch</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>wszystkie możliwe ruchy wieży</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<p><strong>Klasa ChessMain!</strong></p>
+<span class="target" id="module-Szachy.ChessMain"></span><dl class="py function">
+<dt class="sig sig-object py" id="Szachy.ChessMain.drawBoard">
+<span class="sig-prename descclassname"><span class="pre">Szachy.ChessMain.</span></span><span class="sig-name descname"><span class="pre">drawBoard</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">screen</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Szachy.ChessMain.drawBoard" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metoda rysująca szachownicę</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>screen</strong> – powierzchnia na której odbywa się gra</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>void</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Szachy.ChessMain.drawGameState">
+<span class="sig-prename descclassname"><span class="pre">Szachy.ChessMain.</span></span><span class="sig-name descname"><span class="pre">drawGameState</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">screen</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">validMoves</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sqSelected</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Szachy.ChessMain.drawGameState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metoda rysujaca aktualny stan gry w oknie gry</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>validMoves</strong> – wszystkie możliwe do wykonania  ruchy w grze</p></li>
+<li><p><strong>sqSelected</strong> – kwadrat wybrany przez gracza</p></li>
+<li><p><strong>screen</strong> – okno istniejącej gry</p></li>
+<li><p><strong>gs</strong> – obiekt klasy szachownica</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>void</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Szachy.ChessMain.drawPieces">
+<span class="sig-prename descclassname"><span class="pre">Szachy.ChessMain.</span></span><span class="sig-name descname"><span class="pre">drawPieces</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">screen</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">board</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Szachy.ChessMain.drawPieces" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metoda do rysowania elementów na szachownicy</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>screen</strong> – powierzchnia na której odbywa się gra</p></li>
+<li><p><strong>board</strong> – szachownica na której odbywa się gra</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>void</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Szachy.ChessMain.drawText">
+<span class="sig-prename descclassname"><span class="pre">Szachy.ChessMain.</span></span><span class="sig-name descname"><span class="pre">drawText</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">screen</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Szachy.ChessMain.drawText" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metoda wyświetlajaca tekst</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>screen</strong> – okno istniejącej gry</p></li>
+<li><p><strong>text</strong> – tekst do wyświetlenia</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>void</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Szachy.ChessMain.highlightSquares">
+<span class="sig-prename descclassname"><span class="pre">Szachy.ChessMain.</span></span><span class="sig-name descname"><span class="pre">highlightSquares</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">screen</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">validMoves</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sqSelected</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Szachy.ChessMain.highlightSquares" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metoda podświetlajaca kwadrat</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>screen</strong> – powierzchnia gry z biblioteki pygame</p></li>
+<li><p><strong>gs</strong> – obiekt klasy szachownica</p></li>
+<li><p><strong>validMoves</strong> – wszystkie dostępne ruchy, które mogą być wykonane</p></li>
+<li><p><strong>sqSelected</strong> – kwadrat, który gracz wybrał</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>void</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Szachy.ChessMain.loadImages">
+<span class="sig-prename descclassname"><span class="pre">Szachy.ChessMain.</span></span><span class="sig-name descname"><span class="pre">loadImages</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Szachy.ChessMain.loadImages" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metoda przechowujaca grafiki reprezentujące bierki</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Szachy.ChessMain.main">
+<span class="sig-prename descclassname"><span class="pre">Szachy.ChessMain.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Szachy.ChessMain.main" title="Permalink to this definition">¶</a></dt>
+<dd><p>Główna funkcja programu</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>void</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Szachy.ChessMain.showStartGame">
+<span class="sig-prename descclassname"><span class="pre">Szachy.ChessMain.</span></span><span class="sig-name descname"><span class="pre">showStartGame</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">screen</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Szachy.ChessMain.showStartGame" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metoda wyświetlająca ekran początkowy gry</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>screen</strong> – ekran istniejacej gry</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>void</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="#">Table of Contents</a></h3>
+
+  <h3><a href="#">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">DOKUMENTACJA GRY W SZACHY!</a></li>
+<li><a class="reference internal" href="#pakiet-plansza">Pakiet Plansza</a></li>
+<li><a class="reference internal" href="#pakiet-szachy">Pakiet Szachy</a></li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/index.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="#">Szachy  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">DOKUMENTACJA GRY W SZACHY!</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2021, Dominika Stefaniuk.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.1.
+    </div>
+  </body>
+</html>
